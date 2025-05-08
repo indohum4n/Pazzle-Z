@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  gap: 5px;
+  padding: 5px;
+}
+
+.gridpad {
+  padding: 20px;
+}
+
+.item1 {
+  grid-area: header;
+  background-color: gold;
+  border-bottom: 5px solid black;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.item2 {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.item3 {
+  padding: 20px;
+  background-color: #e0f7fa;
+}
+
+.item4 {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.item5 {
+  background-color: #0099cc;
+  padding: 20px;
+  color: white;
+}
+
+.item6 {
+  background-color: #fff8e1;
+  padding: 20px;
+}
+
+/* Styling komponen puzzle */
+.puzzle-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.puzzle-board {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Styling selector gambar */
+.image-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* responsive andro */
+@media only screen and (max-width: 414px) {
+  .item1 { grid-column: 1 / span 8; grid-row: 1; }
+  .item2 { grid-column: 1 / span 8; grid-row: 2; }
+  .item3 { grid-column: 1 / span 8; grid-row: 4; }
+  .item4 { grid-column: 1 / span 8; grid-row: 5; }
+  .item5 { grid-column: 1 / span 8; grid-row: 6; }
+  .item6 { grid-column: 1 / span 8; grid-row: 3; }
+}
+
+/* responsive Tablet */
+@media only screen and (min-width: 415px) and (max-width: 1023px) {
+  .item1 { grid-column: 1 / span 8; grid-row: 1; }
+  .item2 { grid-column: 1 / span 2; grid-row: 2 / span 2; }
+  .item3 { grid-column: 1 / span 8; grid-row: 4; }
+  .item4 { grid-column: 1 / span 8; grid-row: 5; }
+  .item5 { grid-column: 1 / span 8; grid-row: 6; }
+  .item6 { grid-column: 3 / span 6; grid-row: 2 / span 2; }
+}
+
+/* responsive pc */
+@media only screen and (min-width: 1024px) {
+  .item1 { grid-column: 1 / span 8; grid-row: 1; }
+  .item2 { grid-column: 1 / span 2; grid-row: 2 / span 2; }
+  .item3 { grid-column: 3 / span 6; grid-row: 3; }
+  .item4 { grid-column: 1 / span 8; grid-row: 4; }
+  .item5 { grid-column: 1 / span 8; grid-row: 5; }
+  .item6 { grid-column: 3 / span 6; grid-row: 2; }
+}
